@@ -142,7 +142,10 @@ namespace intel_dal
 	   
 	   bool GetHeciDeviceDetail(WCHAR *DevicePath);
 	   HANDLE GetHandle(WCHAR *DevicePath);
+	   HANDLE GetHandle(void);
 
+		bool HeciWrite(HANDLE Handle, void * pData, DWORD DataSize, DWORD msTimeous);
+		bool HeciRead(HANDLE Handle, void * pBuffer, DWORD BufferSize, DWORD * pBytesRead, DWORD msTimeous);
 	private:
 		bool isconnected;
 		int ConnectionAttemptNum;
@@ -151,8 +154,6 @@ namespace intel_dal
 		int MAX_BUFFER_SIZE;
 
 		bool HeciConnectHCI( HANDLE * pHandle,HECI_CLIENT_PROPERTIES * pProperties);
-		bool HeciWrite(HANDLE Handle, void * pData, DWORD DataSize, DWORD msTimeous);
-		bool HeciRead(HANDLE Handle, void * pBuffer, DWORD BufferSize, DWORD * pBytesRead, DWORD msTimeous);
 
 		bool SendGetFwVersionRequest();
 		bool ReceiveGetFwVersionResponse(VERSION* fw_version);
@@ -161,3 +162,4 @@ namespace intel_dal
 }
 
 #endif //_FW_INFO_WIN32_H_
+

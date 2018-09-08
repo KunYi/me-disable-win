@@ -141,7 +141,7 @@ typedef enum
    MKHI_FPF_GROUP_ID,
    MKHI_MAX_GROUP_ID,
    MKHI_GEN_GROUP_ID = 0xFF
-}MKHI_GROUP_ID;
+} MKHI_GROUP_ID;
 
 //NOTE!!!!!!!PLEASE READ
 //The defines for MKHI COMMANDS have moved down further in this file.

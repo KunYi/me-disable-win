@@ -304,6 +304,11 @@ namespace intel_dal
 		return  hDevice; 
 	}
 
+	HANDLE FWInfoWin32::GetHandle(void)
+	{
+		return hDevice;
+	}
+
 	// Connect to HCI client
 	bool FWInfoWin32::HeciConnectHCI( HANDLE * pHandle,HECI_CLIENT_PROPERTIES * pProperties)
 	{
